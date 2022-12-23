@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+* {
+    margin: 0; padding: 0;
+    font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;
+   
+}
+.sec{
+    height: 100vh;
+    width: 100vw;
+    padding: 1vw 5vw 5vw 5vw;
+}
+
+/*KARYA KAMI*/
+.photobanner {
+	height: 500px;
+	width: 2800px;
+	margin-bottom: 80px;
+}
+
+/*keyframe animations*/
+.first {
+	        animation: bannermove 20.5s linear infinite;
+}
+ 
+@keyframes bannermove {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -1140px;
+ }
+ 
+}
+h1{
+    font-weight: 300;
+    font-size: 5vw;
+}
+ 
+.karya{
+    color: white;
+    overflow: hidden;
+    background-color: rgb(14, 14, 14);
+    height: 95vh;
+    padding: 0;
+}
+
+.karya h1{
+    padding: 6vh 0 6vh 5vw;
+}
+
+hr{
+    color: rgb(14, 14, 14);
+    background-color: rgb(14, 14, 14);
+
+}
+
+.detail{
+    margin-right: 2vw;
+    display: inline-block;
+    width: 350px;
+    height: 400px;
+
+}
+.yes{
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.yes div{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.yes span{
+    text-align: right;
+}
+.yes img{
+    width: 350px;
+
+}
+
+.judul{
+    height: 75vh;
+    /* height: fit-content; */
+    margin: 10px;
+}
+
+#judulp{
+    font-size: 1.5vw;
+}
+
+header{
+    overflow: hidden;
+    padding: 10px 2vw 10px 2vw;
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+}
+
+.no{
+    height: 55vh;
+}
+header div{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    height: 6vh;
+    gap: 3vw;
+}
+
+.profil{
+    background-color: rgb(14, 14, 14);
+    padding: 5vw;
+    color: white;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.profil p{
+    font-size: large;
+    justify-content: center;
+    padding-top: 5vh;
+    text-align: center;
+    width: 85vw;
+}
+a{
+    text-decoration: none;
+    color: rgb(14, 14, 14);
+}
+.anggota{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    color: rgb(14, 14, 14);
+    box-sizing:border-box;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100vw;
+  color: rgb(14, 14, 14);
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    
+    margin-left: 10vw;
+    height: 55vh;
+    width: 70vw;
+    color: rgb(14, 14, 14);
+
+
+}
+
+.mySlides div{
+    display:flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content:right;
+    align-items: flex-end;
+    gap: 3vw;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(14, 14, 14);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.2s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgb(14, 14, 14);
+    color: white;
+}
+
+/* Caption text */
+.text {
+    color: rgb(14, 14, 14);
+    font-size: 3vw;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1.2s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.0s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+footer{
+    text-align: center;
+    padding: 5vh 0 2vh 0;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    height: 4vh;
+}
+
+.yes a div{
+    padding: 1.3vh;
+    text-align: right;
+    color: white;
+    border: 1px solid white;
+    height: max-content;
+    width: max-content;
+}
+
+.yes span{
+    text-align: right;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+body {cursor: url('data:image/x-icon;base64,AAACAAEAICACAAAAAAAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAAPAAAADAAAAAwAAAA8AAAAPAAAADAAAAAwAAAM8AAADPAAAA/wAAAP8AAAD/wAAA/8AAAP8AAAD/AAAA/AAAAPwAAADwAAAA8AAAAMAAAADAAAAAAAAAAAAAAAAAAAAAAAAAA///////////////////////D////w////wD///8A////A////wP//zwD//88A///DA///wwP//8AD///AA///wAA//8AAP//AAP//wAD//8AD///AA///wA///8AP///AP///wD///8D////A////w////8P////P////z////8='), auto;}

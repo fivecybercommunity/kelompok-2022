@@ -4,11 +4,244 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
     <link rel="stylesheet" href="style.css">
+    <title>FCC 25</title>
 </head>
 <body>
-    
+
+        <header>
+        
+                <a href="#anggota">
+                    <div><p>Anggota</p></div>
+                </a>
+                <img src="img/black (1).png" alt="" width="65px" height="42px">
+                <a href="#karya">
+                    <div><p>Karya Kami</p></div>
+                </a>
+        
+        </header>
+        <hr>
+        <div class="sec judul" id="judul">
+            <br><br>
+            <img src="img/sman5.jpeg" alt="" style="width: 85vw;">
+            <br><br>
+            <h1 id="judulH1top"></h1>
+            <h1 id="judulH1bottom"></h1>
+            <p id="judulp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div class="sec profil">
+            <h1>- Profil -</h1>
+            <p>Five Cyber Community dibentuk pada 31 Agustus tahun 2008.
+                Five Cyber Community adalah ekskul yang bergerak pada bidang teknologi, terutama pada <i>website development</i>. Dengan adanya ekskul ini, diharapkan siswa dapat mengembangkan minat dan bakatnya pada bidang teknologi.</p>
+        </div>
+        <script>
+            // TITLE TYPING ANIMATION
+            /* ********************************************************* */
+            var i = 0, j = 0, k = 0;
+            var txt1 = '> FIVE  CYBER  ';
+            var txt2 = '\xa0\xa0' + '  COMMUNITY';
+            var txt3 = 'One step closer into technological singularity.';
+            var speed = 100;
+
+            function typeWriter1() {
+                if (i < txt1.length) {
+                    document.getElementById("judulH1top").innerHTML += txt1.charAt(i);
+                    i++;
+                    setTimeout(typeWriter1, speed);
+                }
+            }
+            function typeWriter2(){
+                if (j < txt2.length) {
+                    document.getElementById("judulH1bottom").innerHTML += txt2.charAt(j);
+                    j++;
+                    setTimeout(typeWriter2, speed);
+                }
+            }
+            function typeWriter3(){
+                if (k < txt3.length) {
+                    document.getElementById("judulp").innerHTML += txt3.charAt(k);
+                    k++;
+                    setTimeout(typeWriter3, speed);
+                }
+            }
+            function typeWriter(){
+                typeWriter1();
+                setTimeout(typeWriter2, 1500);
+                setTimeout(typeWriter3, 3000);
+            }
+            typeWriter();
+        </script>
+        <div class="sec anggota" id="anggota">
+            <br>
+            <h1>- Anggota -</h1>
+            <br><hr><br>
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="no">
+                            <div class="text">Renata Puspanegara Ninagan</div>
+
+                        <div><img src="img/renata.jpeg" style="height:100%;width:27vw;"></div>
+                    </div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="no">
+                        <div class="text">Arthuro Araf</div>
+                        <div><img src="img/arthur.jpeg" style="height:100%;width:27vw;"></div>
+                    </div>         
+                </div>
+            
+                <div class="mySlides fade">
+                    <div class="no">
+                        <div class="text">Ashila Nur Azka</div>
+                        <div><img src="img/ashila.jpeg" style="height:100%;width:27vw;"></div>
+                    </div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br><hr>
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </div>
+        <div class="sec karya" id="karya">
+            <h1>#Karya Kami</h1>
+            <div class="photobanner">
+                <div class="first detail t1">
+                    <div class="yes">
+                        <div>
+                            <img src="img/hp.png" alt="">
+                            <h2>Virtual Exhibition Hari Pahlawan</h2>
+                            <p>Virtual exhibition yang tentang pertempuran surabaya yang dibuat oleh <i>theresilan</i> dan kelompoknya untuk tugas P5 semester 1.</p>
+                        </div>
+                        <span>
+                            <a href="https://hari-pahlawan.000webhostapp.com/">
+                                <div><p>Open</p></div>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="detail t2">
+                    <div class="yes">
+                        <div>
+                            <img src="img/random.png" alt="">
+                            <h2>Generator Kursi dan Kelompok</h2>
+                            <p>Website yang dibuat oleh <i>theresilan</i> untuk mengacak tempat duduk tiap hari atau kelompok agar lebih mudah dan cepat.</p>
+                        </div>
+                            <span>
+                                <a href="https://codepen.io/renata123/full/ExLqzLm">
+                                    <div><p>Open</p></div>
+                                </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="detail t3">
+                    <div class="yes">
+                        <div>
+                            <img src="img/porto.png" alt="">
+                            <h2>Portofolio Arthuro Araf</h2>
+                            <p>Website portofolio Arthuro Araf yang dibuat setelah belajar sedikit mengenai HTML dan CSS di ekskul ini.</p>    
+                        </div>
+                        <span>
+                            <a href="https://iitbre.github.io/portofolio/">
+                                <div><p>Open</p></div>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="detail t1">
+                    <div class="yes">
+                        <div>
+                            <img src="img/hp.png" alt="">
+                            <h2>Virtual Exhibition Hari Pahlawan</h2>
+                            <p>Virtual exhibition yang tentang pertempuran surabaya yang dibuat oleh <i>theresilan</i> dan kelompoknya untuk tugas P5 semester 1.</p>
+                        </div>
+                        <span>
+                            <a href="https://hari-pahlawan.000webhostapp.com/">
+                                <div><p>Open</p></div>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="detail t2">
+                    <div class="yes">
+                        <div>
+                            <img src="img/random.png" alt="">
+                            <h2>Generator Kursi dan Kelompok</h2>
+                            <p>Website yang dibuat oleh <i>theresilan</i> untuk mengacak tempat duduk tiap hari atau kelompok agar lebih mudah dan cepat.</p>
+                        </div>
+                        <span>
+                            <a href="https://codepen.io/renata123/full/ExLqzLm">
+                                <div><p>Open</p></div>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="detail t3">
+                    <div class="yes">
+                        <div>
+                            <img src="img/porto.png" alt="">
+                            <h2>Portofolio Arthuro Araf</h2>
+                            <p>Website portofolio Arthuro Araf yang dibuat setelah belajar sedikit mengenai HTML dan CSS di ekskul ini.</p>    
+                        </div>
+                        <span>
+                            <a href="https://iitbre.github.io/portofolio/">
+                                <div><p>Open</p></div>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="detail t1">
+                    <div class="yes">
+                        <div>
+                            <img src="img/hp.png" alt="">
+                            <h2>Virtual Exhibition Hari Pahlawan</h2>
+                            <p>Virtual exhibition yang tentang pertempuran surabaya yang dibuat oleh <i>theresilan</i> dan kelompoknya untuk tugas P5 semester 1.</p>
+                        </div>
+                        <span>
+                            <a href="https://hari-pahlawan.000webhostapp.com/">
+                                <div><p>Open</p></div>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>#FCC 2022</p>
+        </footer>
+        <div class="cursor"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
